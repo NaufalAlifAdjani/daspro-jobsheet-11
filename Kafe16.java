@@ -1,9 +1,17 @@
 public class Kafe16 {
-    public static void Menu(String namaPelanggan, boolean isMember){
+    public static void Menu(String namaPelanggan, String kodePromo, boolean isMember){
         System.out.println("Selamat datang, " + namaPelanggan + "!");
 
         if (isMember) {
             System.out.println("Anda adalah member, dapatkan diskon 10% untuk setiap pembelian!");
+        }
+
+        if (kodePromo.equals("DISKON50")) {
+            System.out.println("Kode promo valid: Diskon 50%!");
+        } else if (kodePromo.equals("DISKON30")) {
+            System.out.println("Kode promo valid: Diskon 30%!");
+        } else {
+            System.out.println("Kode promo tidak valid.");
         }
 
         System.out.println("===== MENU RESTO KAFE =====");
@@ -15,10 +23,14 @@ public class Kafe16 {
         System.out.println("6. Mie Goreng   - Rp 18,000");
         System.out.println("===========================");
         System.out.println("Silahkan pilih menu yang Anda inginkan");
+
+        System.out.println();
     }
 
     public static void main(String[] args){
-        Menu("Andi", true);
+        Menu("Andi", "DISKON50",true);
+        Menu("Nana", "DISKON30",true);
+        Menu("Nina", "",true);
     }
 
 }

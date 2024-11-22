@@ -1,7 +1,11 @@
-//2.1 Percobaan 1: Membuat Fungsi Tanpa Parameter
 public class Kafe16 {
+    public static void Menu(String namaPelanggan, boolean isMember){
+        System.out.println("Selamat datang, " + namaPelanggan + "!");
 
-    public static void main(String[] args){
+        if (isMember) {
+            System.out.println("Anda adalah member, dapatkan diskon 10% untuk setiap pembelian!");
+        }
+
         System.out.println("===== MENU RESTO KAFE =====");
         System.out.println("1. Kopi Hitam   - Rp 15,000");
         System.out.println("2. Cappuccino   - Rp 20,000");
@@ -13,7 +17,8 @@ public class Kafe16 {
         System.out.println("Silahkan pilih menu yang Anda inginkan");
     }
 
+    public static void main(String[] args){
+        Menu("Andi", true);
+    }
+
 }
-
-
-
